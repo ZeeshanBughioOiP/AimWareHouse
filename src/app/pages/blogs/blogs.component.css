@@ -1,0 +1,23 @@
+.blogGrid {
+  margin: 15px 0;
+}
+.blogGrid img.aboutus-img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  object-position: top;
+}
+.imgBlog {
+  margin-bottom: 15px;
+}
+.blogGrid h4 {
+  font-weight: 500;
+  color: #0f1762;
+}
+
+.blogCont p {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
