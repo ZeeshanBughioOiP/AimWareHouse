@@ -47,25 +47,25 @@ export class MainComponent implements OnInit {
     private metaService: Meta, private titleService: Title,
     private renderer: Renderer2,
     @Inject(DOCUMENT) private document: Document
-    ) { 
+  ) {
 
-      this.setCanonicalURL('https://aimwarehousing.com/');
+    this.setCanonicalURL('https://aimwarehousing.com/');
 
-        // Set the title for this component (page)
-        this.titleService.setTitle('Warehousing and Logistics Services - Aim Warehousing');
+    // Set the title for this component (page)
+    this.titleService.setTitle('Warehousing and Logistics Services - Aim Warehousing');
 
-        this.metaService.addTags([
-          { name: 'keywords', content: 'warehousing and logistics, affordable warehousing services, warehouse storage facilities, warehousing service, inventory management specialist, Aim Warehousing, fnsku labels, , repacking services, Shrink wrap services' },
-          { name: 'title', content: 'Warehousing and Logistics Services - Aim Warehousing' },
-          { name: 'keywords', content: 'With the best and most affordable warehousing services from Aim Warehousing, elevate your warehouse operational efficiency. Get in touch now' },
-        ]);
-    }
-    setCanonicalURL(url: string) {
-      const link: HTMLLinkElement = this.renderer.createElement('link');
-      this.renderer.setAttribute(link, 'rel', 'canonical');
-      this.renderer.setAttribute(link, 'href', url);
-      this.renderer.appendChild(this.document.head, link);
-    }
+    this.metaService.addTags([
+      { name: 'keywords', content: 'warehousing and logistics, affordable warehousing services, warehouse storage facilities, warehousing service, inventory management specialist, Aim Warehousing, fnsku labels, , repacking services, Shrink wrap services' },
+      { name: 'title', content: 'Warehousing and Logistics Services - Aim Warehousing' },
+      { name: 'description', content: 'With the best and most affordable warehousing services from Aim Warehousing, elevate your warehouse operational efficiency. Get in touch now' },
+    ]);
+  }
+  setCanonicalURL(url: string) {
+    const link: HTMLLinkElement = this.renderer.createElement('link');
+    this.renderer.setAttribute(link, 'rel', 'canonical');
+    this.renderer.setAttribute(link, 'href', url);
+    this.renderer.appendChild(this.document.head, link);
+  }
   userDetails: any = {};
   file: File[] = [];
   storageData: any = [];
@@ -107,7 +107,7 @@ export class MainComponent implements OnInit {
           formData.append('question', this.userDetails.question);
           formData.append("file_doc", this.file[0]);
           this.apiService.sendEmail(formData).subscribe((res: any) => {
-            if(res.status){
+            if (res.status) {
               this.notificationsService.success("Success!", "Data has been send successfully.");
               this.userDetails = {};
               this.file = [];

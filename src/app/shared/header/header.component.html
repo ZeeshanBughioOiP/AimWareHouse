@@ -28,61 +28,69 @@
     <header class="head container-1440">
         <nav class="navbar">
             <div class="logo">
-                <img width="110px" src="assets/logo.png" alt="LOGO">
+                <a [routerLink]="['/']">
+                    <img width="110px" src="assets/logo.png" alt="LOGO">
+                </a>
                 <!-- <span>We provide legal solutions for you !</span> -->
             </div>
             <div class="push-left">
-                <button id="menu-toggler" data-class="menu-active" class="hamburger" (click)="changeClassForActiveDeactive()">
-              <span class="hamburger-line hamburger-line-top"></span>
-              <span class="hamburger-line hamburger-line-middle"></span>
-              <span class="hamburger-line hamburger-line-bottom"></span>
-           </button>
+                <button id="menu-toggler" data-class="menu-active" class="hamburger"
+                    (click)="changeClassForActiveDeactive()">
+                    <span class="hamburger-line hamburger-line-top"></span>
+                    <span class="hamburger-line hamburger-line-middle"></span>
+                    <span class="hamburger-line hamburger-line-bottom"></span>
+                </button>
                 <!--  Menu compatible with wp_nav_menu  -->
                 <ul id="primary-menu" class="menu nav-menu">
-                    <li class="menu-item mt-1"><a class="nav__link nav-link" [ngClass]="{'nav-link-active': router.url == '/'}" [routerLink]="['/']">Home</a></li>
+                    <li class="menu-item mt-1"><a class="nav__link nav-link"
+                            [ngClass]="{'nav-link-active': router.url == '/'}" [routerLink]="['/']">Home</a></li>
                     <!-- <li class="menu-item mt-1"><a class="nav__link nav-link" href="">Services</a></li> -->
                     <!-- <li class="menu-item mt-1"><a class="nav__link nav-link" href="">Company</a></li> -->
                     <!-- <li class="menu-item mt-1"><a class="nav__link nav-link" href="">New Resources</a></li> -->
                     <li class="menu-item mt-1 dropDownMenu">
-                        <a class="nav__link nav-link" href="javascript:void(0)" (click)="toggleMenu()">Services <i class="fa fa-chevron-down"></i></a>
+                        <a class="nav__link nav-link" href="javascript:void(0)" (click)="toggleMenu()">Services <i
+                                class="fa fa-chevron-down"></i></a>
                         <ul class="submenu" [ngClass]="{ 'active': isMenuOpen }">
                             <li>
                                 <a [routerLink]="['/label-printing-pasting']">
                                     <p>Label Printing & Pasting</p>
                                 </a>
-                              </li>
-                              <li>
-                                  <a [routerLink]="['/sales-returns-management']">
-                                      <p>Sales Returns Management</p>
-                                  </a>
-                              </li>
-                              <li>
-                                  <a [routerLink]="['/promotional-packaging']">
-                                      <p>Promotional Packaging</p>
-                                  </a>
-                              </li>
-                              <li>
-                                  <a [routerLink]="['/package-designing']">
-                                      <p>Package Designing</p>
-                                  </a>
-                              </li>
-                              <li>
-                                  <a [routerLink]="['/order-fulfillment']">
-                                      <p>Order Fulfillment </p>
-                                  </a>
-                              </li>
-                              <li>
-                                  <a [routerLink]="['/inventory-management']">
-                                      <p>Inventory Management</p>
-                                  </a>
-                              </li>
+                            </li>
+                            <li>
+                                <a [routerLink]="['/sales-returns-management']">
+                                    <p>Sales Returns Management</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a [routerLink]="['/promotional-packaging']">
+                                    <p>Promotional Packaging</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a [routerLink]="['/package-designing']">
+                                    <p>Package Designing</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a [routerLink]="['/order-fulfillment']">
+                                    <p>Order Fulfillment </p>
+                                </a>
+                            </li>
+                            <li>
+                                <a [routerLink]="['/inventory-management']">
+                                    <p>Inventory Management</p>
+                                </a>
+                            </li>
                         </ul>
                     </li>
-                    <li class="menu-item mt-1"><a class="nav__link nav-link" [routerLink]="['/blogs']" [ngClass]="{'nav-link-active': router.url == '/blogs'}">Blogs</a></li>
-                    <li class="menu-item mt-1"><a class="nav__link nav-link" [routerLink]="['/contact']" [ngClass]="{'nav-link-active': router.url == '/contact'}">Contact</a></li>
+                    <li class="menu-item mt-1"><a class="nav__link nav-link" [routerLink]="['/blogs']"
+                            [ngClass]="{'nav-link-active': router.url == '/blogs'}">Blogs</a></li>
+                    <li class="menu-item mt-1"><a class="nav__link nav-link" [routerLink]="['/contact']"
+                            [ngClass]="{'nav-link-active': router.url == '/contact'}">Contact</a></li>
                     <!-- <li class="menu-item mt-1"><a class="nav__link nav-link" href="">Features</a></li> -->
-                    <li class="menu-item mt-1"><a class="nav__link" [routerLink]="['/quote']"><button class="btn-nav">Get A
-                       Quote</button></a></li>
+                    <li class="menu-item mt-1"><a class="nav__link" [routerLink]="['/quote']"><button
+                                class="btn-nav">Get A
+                                Quote</button></a></li>
                 </ul>
             </div>
         </nav>

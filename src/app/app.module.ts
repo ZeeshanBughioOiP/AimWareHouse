@@ -26,6 +26,7 @@ import { TheRoleOfWarehousingAndLogisticsInECommerceComponent } from './pages/th
 import { TheInventoryManagementSpecialistAndTheSystemComponent } from './pages/the-inventory-management-specialist-and-the-system/the-inventory-management-specialist-and-the-system.component';
 import { ImportanceOfPromotionalProductPackagesInEcommerceComponent } from './pages/importance-of-promotional-product-packages-in-ecommerce/importance-of-promotional-product-packages-in-ecommerce.component';
 import { HiringProfessionalPackagingDesignServicesComponent } from './pages/hiring-professional-packaging-design-services/hiring-professional-packaging-design-services.component';
+import { PagenotfoundComponent } from './pages/pagenotfound/pagenotfound.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { HiringProfessionalPackagingDesignServicesComponent } from './pages/hiri
     TheRoleOfWarehousingAndLogisticsInECommerceComponent,
     TheInventoryManagementSpecialistAndTheSystemComponent,
     ImportanceOfPromotionalProductPackagesInEcommerceComponent,
-    HiringProfessionalPackagingDesignServicesComponent
+    HiringProfessionalPackagingDesignServicesComponent,
+    PagenotfoundComponent
   ],
   imports: [
     BrowserModule,

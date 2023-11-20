@@ -1,20 +1,20 @@
 .head-top-change {
-    background-color: #0f1762;
+  background-color: #0f1762;
 }
 
 .line-behaviour {
-    background: #fff !important;
+  background: #fff !important;
 }
 ul.submenu {
-    position: absolute;
-    background: #fff;
-    padding: 15px 0;
-    border-radius: 10px;
-    z-index: 10000;
-    transition: all 1s linear 0s;
-    opacity: 0;
-    overflow: hidden;
+  position: absolute;
+  background: #fff;
+  padding: 15px 0;
+  border-radius: 10px;
+  z-index: 10000;
+  transition: all 0.3s linear 0s;
+  opacity: 0;
+  overflow: hidden;
 }
 ul.submenu.active {
-    opacity: 1;
+  opacity: 1;
 }
